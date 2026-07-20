@@ -1,0 +1,391 @@
+/* ===================================================================
+ * KARDS TEMPLATE ADAPTATION - PURE CSS (NO MEDIA QUERIES)
+ * =================================================================== */
+
+/* --- RESET & TYPOGRAPHY --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  background-color: #151515;
+  color: #7a7a7a;
+}
+
+body {
+  display: flex; /* Creates the Sidebar + Main layout natively */
+  min-height: 100vh;
+}
+
+/* --- B. NAVIGATION BAR (SIDEBAR) --- */
+.sidebar {
+  width: 250px;
+  background-color: #111111;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding: 40px 0;
+  z-index: 1000;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  margin-bottom: 50px;
+}
+
+.logo-icon {
+  color: #e31b6d;
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.logo-text {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 15px 40px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #e31b6d;
+}
+
+/* --- MAIN CONTENT AREA --- */
+.main-content {
+  margin-left: 250px; /* Pushes content right of the fixed sidebar */
+  width: calc(100% - 250px);
+  background-color: #151515;
+}
+
+.section {
+  padding: 80px 40px;
+}
+
+.dark-section {
+  background-color: #151515;
+}
+
+.light-section {
+  background-color: #1a1a1a;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-title {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #e31b6d;
+  margin-top: 15px;
+}
+
+/* --- A. HEADER SECTION (HERO) --- */
+.site-header {
+  background-color: #111111;
+  padding: 150px 40px;
+  text-align: center;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.greeting {
+  color: #e31b6d;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.student-name {
+  color: #ffffff;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+.course-year {
+  color: #7a7a7a;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.motto {
+  color: #555555;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* --- C. HOME SECTION (INTRO) --- */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap; /* Wraps naturally without media queries */
+  align-items: center;
+  gap: 40px;
+}
+
+.profile-picture {
+  flex: 1;
+  min-width: 250px;
+}
+
+.profile-picture img {
+  width: 100%;
+  border-radius: 5px;
+  border: 3px solid #1f1f1f;
+}
+
+.intro-content {
+  flex: 2;
+  min-width: 300px;
+}
+
+.intro-content h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #111111;
+  color: #ffffff;
+  border: 1px solid #333333;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-color: #e31b6d;
+  color: #e31b6d;
+}
+
+.btn-secondary {
+  background-color: transparent;
+}
+
+/* --- D. ABOUT ME SECTION --- */
+.about-paragraphs p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  color: #7a7a7a;
+}
+
+/* --- E. SKILLS SECTION --- */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill-card {
+  flex: 1 1 250px;
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 5px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.skill-card:hover {
+  border-bottom-color: #e31b6d;
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  color: #e31b6d;
+  margin-bottom: 20px;
+}
+
+.skill-card h4 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* --- F. GALLERY PORTFOLIO --- */
+.portfolio-grid {
+  display: grid;
+  /* Intrinsic responsiveness without media queries */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  background-color: #111111;
+  border-radius: 4px;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(227, 27, 109, 0.85); /* Kards Accent Overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay figcaption {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 10px;
+}
+
+/* --- G. CONTACT SECTION --- */
+.contact-form {
+  background-color: #1a1a1a;
+  padding: 40px;
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background-color: #111111;
+  border: 1px solid #222222;
+  padding: 15px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #e31b6d;
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* --- H. FOOTER SECTION --- */
+.site-footer {
+  background-color: #111111;
+  padding: 50px 40px;
+  text-align: center;
+  border-top: 1px solid #1f1f1f;
+}
+
+.footer-info p {
+  margin-bottom: 5px;
+  font-size: 0.85rem;
+}
+
+.social-links {
+  margin: 20px 0;
+}
+
+.social-links a {
+  display: inline-block;
+  color: #ffffff;
+  background-color: #1a1a1a;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+  background-color: #e31b6d;
+}
+
+.credit p {
+  font-size: 0.75rem;
+  color: #555555;
+}
+
+.credit a {
+  color: #e31b6d;
+  text-decoration: none;
+}
+
+.credit a:hover {
+  text-decoration: underline;
+}
