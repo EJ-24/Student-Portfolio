@@ -1,5 +1,5 @@
 /* ===================================================================
- * KARDS TEMPLATE ADAPTATION - PURE CSS (NO MEDIA QUERIES)
+ * KARDS TEMPLATE ADAPTATION
  * =================================================================== */
 
 /* --- RESET & TYPOGRAPHY --- */
@@ -250,7 +250,6 @@ body {
 /* --- F. GALLERY PORTFOLIO --- */
 .portfolio-grid {
   display: grid;
-  /* Intrinsic responsiveness without media queries */
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
 }
