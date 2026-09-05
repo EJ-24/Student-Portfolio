@@ -76,9 +76,18 @@ body {
   margin-top: 15px;
 }
 
+/* 1. Center the container's contents */
 .profile-picture {
-  width: 0 auto;
-  height: 0 auto;
+  text-align: center;
+}
+
+/* 2. Target the image directly to control its size */
+.profile-picture img {
+  max-width: 350px; /* Adjust this number up or down to find your perfect size */
+  width: 100%; /* Ensures the image scales down on smaller screens */
+  height: auto; /* Keeps the image from stretching out of proportion */
+  border-radius: 12px; /* Optional: smooths out the sharp corners */
+  margin: 0 auto; /* Centers the image horizontally */
 }
 
 .scroll-top {
